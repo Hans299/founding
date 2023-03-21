@@ -1,36 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { StyleSheet, View } from 'react-native';
+import * as Location from 'expo-location';
 
 export default function App() {
+  const [location, setLocation] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+    })();
+  }, []);
+
   return (
     <View style={styles.container}>
-      <MapView
-        style={styles.map}
-        mapType={"terrain"}
-        initialRegion={{
-          latitude: -6.2088,
-          longitude: 105.8456,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-      }} >
+      {location && (
+        <MapView
+          style={styles.map}
+          mapType={"terrain"}
+          initialRegion={{
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }} >
+          <Marker
+            title='Lokasi Saya'
+            coordinate={{ 
+              latitude: location.coords.latitude,
+              longitude: location.coords.longitude,
+            }} />
 
-        <Marker
-          title='Lokasi Saya'
-          coordinate={{ 
-            latitude: -6.2088,
-            longitude: 105.8456,
-          }} />
-          
-
-        <Marker
-          title='Lokasi Gerry'
-          coordinate={{ 
-            latitude: -6.2088,
-            longitude: 106.8456,
-          }} />
-
-    </MapView>
+        </MapView>
+      )}
     </View>
   );
 }
@@ -44,3 +54,4 @@ const styles = StyleSheet.create({
     height: '100%',
   },
 });
+
