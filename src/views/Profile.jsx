@@ -1,5 +1,5 @@
 import { Image } from 'react-native';
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function Profile({navigation}) {
     const toHome = () => {

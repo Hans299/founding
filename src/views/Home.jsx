@@ -5,14 +5,12 @@ import * as Location from 'expo-location';
 
 export default function App({navigation}) {
   const [location, setLocation] = useState(null);
-  const [errorMsg, setErrorMsg] = useState(null);
-  const [textInputValue, setTextInputValue] = useState('');
 
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        setErrorMsg('Permission to access location was denied');
+        alert('Permission to access location was denied');
         return;
       }
 
@@ -20,10 +18,6 @@ export default function App({navigation}) {
       setLocation(location);
     })();
   }, []);
-
-  const handleTextInputChange = (text) => {
-    setTextInputValue(text);
-  };
 
   const toProfile = () => {
     navigation.navigate('Profile')
@@ -34,7 +28,6 @@ export default function App({navigation}) {
       {location && (
         <MapView
           style={styles.map}
-          mapType={"terrain"}
           initialRegion={{
             latitude: location.coords.latitude,
             longitude: location.coords.longitude,
@@ -53,8 +46,8 @@ export default function App({navigation}) {
       <View style={styles.textInputContainer}>
         <TextInput
           style={styles.textInput}
-          value={textInputValue}
-          onChangeText={handleTextInputChange}
+          value=""
+          onChangeText={() => {}}
           placeholder="Temukan Lahan"
         />
         <Button
