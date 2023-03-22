@@ -22,7 +22,7 @@ Aplikasi dapat berjalan dengan normal disimulasi expo namun ketika dijalankan de
 
 ## VIDEO
 `Demo dengan tools expo:`
-https://user-images.githubusercontent.com/40206939/226850093-6cdd2fc9-9fb4-453e-9b3e-b2738d847fd2.mp4
+https://user-images.githubusercontent.com/40206939/shorts/65BZxyoha7I?raw=true
 
 
 ## Cara Instalasi
