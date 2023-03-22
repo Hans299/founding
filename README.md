@@ -18,12 +18,10 @@ Aplikasi `founding` merupakan aplikasi yang berfungsi untuk mevisualisasikan pet
 - `react-native-maps`: Digunakan untuk memanggil fungsi dan memvisualisasikan maps
 
 ## NOTE
-Aplikasi dapat berjalan dengan normal disimulasi expo namun ketika dijalankan dengan model apk utuh terjadi crash
+Aplikasi dapat berjalan dengan normal disimulasi expo namun ketika dijalankan dengan model apk utuh terjadi crash berikut video jalan aplikasi dengan simulasi expo
 
 ## VIDEO
-`Demo dengan tools expo:`
-https://user-images.githubusercontent.com/Hans299/drive.google.com/file/d/1b1CpM_RgXa5aFOTKEF9OwkOdJXKw8E-Q/view?usp=share_link
-
+https://user-images.githubusercontent.com/40206939/226850093-6cdd2fc9-9fb4-453e-9b3e-b2738d847fd2.mp4
 
 
 ## Cara Instalasi
