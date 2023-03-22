@@ -9,7 +9,7 @@ Aplikasi `founding` merupakan aplikasi yang berfungsi untuk mevisualisasikan pet
 - `@react-navigation/native-stack`: Digunakan untuk perutean dan navigasi di Aplikasi React Native dengan membantu memecahkan masalah navigasi di beberapa layar dan berbagi antar layar. 
 - `@react-navigation/native`: membantu memecahkan masalah navigasi di beberapa layar dan berbagi antar layar.
 - `expo`: Digunakan untuk mendevelop react native
-- `expo-status-bar`: Digunakan untuk mengontorol status bar.
+- `expo-location`: Digunakan untuk mengontorol posisi dari perangkat.
 - `react`: Digunakan untuk membangun user interface yang interaktif
 - `react-native`: Digunakan untuk membuat aplikasi mobile di dua sistem operasi sekaligus yaitu Android dan IOS.
 - `react-native-safe-area-context`: Digunakan untuk mengontorol informasi yang aman dari situs yang aman.
@@ -19,6 +19,11 @@ Aplikasi `founding` merupakan aplikasi yang berfungsi untuk mevisualisasikan pet
 
 ## NOTE
 Aplikasi dapat berjalan dengan normal disimulasi expo namun ketika dijalankan dengan model apk utuh terjadi crash
+
+## VIDEO
+`Demo dengan tools expo:`
+https://user-images.githubusercontent.com/Hans299/drive.google.com/file/d/1b1CpM_RgXa5aFOTKEF9OwkOdJXKw8E-Q/view?usp=share_link
+
 
 
 ## Cara Instalasi
