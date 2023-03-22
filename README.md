@@ -22,7 +22,7 @@ Aplikasi dapat berjalan dengan normal disimulasi expo namun ketika dijalankan de
 
 ## VIDEO
 `Demo dengan tools expo:`
-https://user-images.githubusercontent.com/Hans299/drive.google.com/file/d/1b1CpM_RgXa5aFOTKEF9OwkOdJXKw8E-Q/view?usp=share_link
+<video src="assets/UTS_PAM.mp4" width="200">
 
 
 
